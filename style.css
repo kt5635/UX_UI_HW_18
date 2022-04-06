@@ -1,4 +1,7 @@
 /* menu */
+* {
+  box-sizing: border-box;
+}
 .topnav {
   background: #ffffff;
   overflow: hidden;
@@ -65,35 +68,41 @@ body {
 .main-body h1 {
   font-family: "Source Sans Pro", sans-serif;
   color: #2c5234;
-  margin-left: 50%;
-  margin-bottom: 0%;
-  padding-top: 5%;
-  padding-bottom: 0%;
+  margin: 0% 0% 0% 10%;
+  padding: 5% 5% 0% 5%;
   font-size: 40px;
 }
-.work-card-row:after {
-  content: "";
-  display: table;
-  clear: both;
+.work-together {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 40px;
+  color: #2c5234;
+  padding: 5%;
+  margin-left: 0% 0% 0% 10%;
 }
-.column {
-  float: left;
-  width: 20%;
-  padding-left: 10%;
-  margin-top: 3%;
-  display: table-cell;
+
+/* work cards */
+
+.work-card-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  column-gap: 3%;
+  padding: 5%;
 }
-.work-card-row h2 {
+.card h2 {
   font-size: 35px;
-  font-style: bold;
   font-family: "Playful Display", serif;
-  margin-left: 0%;
+  padding: 0% 5%;
 }
-.work-card-row p {
+.card p {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 25px;
+  padding: 0% 5%;
 }
-.card1 {
+.card-container {
+  padding: 2%;
+}
+.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 03s;
   border-radius: 25px;
@@ -102,54 +111,11 @@ body {
   height: 100%;
 }
 
-.card1 img {
+.card img {
   border-radius: 25px 25px 0 0;
   width: 100%;
 }
 
-.card-container1 {
-  padding: 2% 5%;
-}
-.card2 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 03s;
-  border-radius: 25px;
-  background: #ffffff;
-  color: #2c5234;
-}
-
-.card2 img {
-  border-radius: 25px 25px 0 0;
-  width: 100%;
-}
-
-.card-container2 {
-  padding: 2% 5%;
-}
-.card3 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 03s;
-  border-radius: 25px;
-  background: #ffffff;
-  color: #2c5234;
-}
-
-.card3 img {
-  border-radius: 25px 25px 0 0;
-  width: 100%;
-}
-
-.card-container3 {
-  padding: 2% 5%;
-}
-
-.main-body p {
-  font-family: "Source Sans Pro, sans-serif";
-  font-size: 25px;
-  color: #2c5234;
-  padding: 1%;
-  margin-left: 10%;
-}
 /* footer */
 .flex-container-footer {
   display: flex;
@@ -159,8 +125,7 @@ body {
   color: #2c5234;
   border-top: 3px solid #2c5234;
   font-family: "Playful Display", serif;
-  padding: 1%;
-  border-top: 3px solid #2c5234;
+  padding: 1.5%;
 }
 
 .copywrite {
@@ -168,9 +133,151 @@ body {
   font-size: 15px;
 }
 .linkedin-icon img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 .email {
-  font-size: 20px;
+  font-size: 25px;
+}
+
+/* mobile view */
+@media screen and (max-width: 600px) {
+  .topnav {
+    background: #ffffff;
+    overflow: hidden;
+    margin-bottom: 0%;
+    border-bottom: 3px solid #2c5234;
+  }
+  .topnav a {
+    float: left;
+    color: #2c5234;
+    text-align: center;
+    padding: 14 px 25 px;
+    font-size: 40px;
+    font-style: bold;
+    font-family: "Playful Display", serif;
+    position: static;
+  }
+  .flex-container-nav a:hover {
+    background-color: #ffffff;
+  }
+  .flex-container-nav a:hover:not(.logo) {
+    background: #f1f6f9;
+  }
+  .topnav a.active {
+    background: #2c5234;
+    color: #f1f6f9;
+  }
+  .flex-container-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  /* main body */
+  body {
+    background-color: #f1f6f9;
+    margin: 0%;
+  }
+  #intro {
+    border: 1px solid #ffffff;
+    height: 500px;
+    margin-top: 0%;
+    background: url("Images/nicolas-solerieu-o3O5Y5rxwxI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .hero-img {
+    font-family: "Source Sans Pro", sans-serif;
+  }
+  #intro h1 {
+    color: #2c5234;
+    margin-bottom: 0%;
+    padding-top: 5%;
+    padding-bottom: 0%;
+    margin-left: 5%;
+    font-size: 30px;
+  }
+  #intro p {
+    color: #2c5234;
+    margin-top: 0%;
+    padding-top: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+    margin-left: 10%;
+  }
+  .main-body h1 {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #2c5234;
+    padding: 5% 5% 0% 5%;
+    font-size: 30px;
+  }
+  .work-together {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 30px;
+    color: #2c5234;
+    padding: 5%;
+    margin-top: 2%;
+  }
+  /* work cards */
+
+  .work-card-grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    row-gap: 2%;
+    width: 100%;
+    padding: 5%;
+    height: 100%;
+  }
+  .card h2 {
+    font-size: 35px;
+    font-family: "Playful Display", serif;
+    padding: 0% 5%;
+  }
+  .card p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 25px;
+    padding: 0% 5%;
+  }
+  .card-container {
+    padding: 2%;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 03s;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #2c5234;
+    height: 100%;
+  }
+
+  .card img {
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+  }
+
+  /* footer */
+  .flex-container-footer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: #ffffff;
+    color: #2c5234;
+    border-top: 3px solid #2c5234;
+    font-family: "Playful Display", serif;
+    padding: 1.5%;
+  }
+
+  .copywrite {
+    font-size: 15px;
+  }
+  .linkedin-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  .email {
+    font-size: 20px;
+  }
 }
