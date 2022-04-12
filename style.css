@@ -164,6 +164,7 @@ body {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+  box-shadow: 5px 5px 10px #707070;
 }
 .about-text p {
   color: #2c5234;
@@ -216,6 +217,10 @@ body {
     grid-gap: 2%;
     padding: 6%;
     content: "";
+  }
+  .picture-column {
+    flex: 50%;
+    max-width: 50%;
   }
 }
 /* responsive screen 800px */
@@ -272,5 +277,9 @@ body {
     color: #2c5234;
     padding: 5% 5% 5% 5%;
     margin: 15% 0% 0% 10%;
+  }
+  .picture-column {
+    flex: 100%;
+    max-width: 100%;
   }
 }
