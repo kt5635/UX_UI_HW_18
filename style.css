@@ -179,7 +179,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  width: 50%;
 }
 .resume-body img {
   margin-bottom: 5%;
@@ -236,6 +235,16 @@ body {
     color: #2c5234;
     padding: 5% 5% 5% 5%;
     margin: 5% 0% 0% 8%;
+  }
+  .resume-body {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .resume-body img {
+    margin-bottom: 5%;
+    width: 90%;
   }
 }
 /* responsive screen 600px */
