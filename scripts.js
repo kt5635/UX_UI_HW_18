@@ -1,6 +1,5 @@
-document.getElementById("case-study-button").onclick = function () {
-  myFunction();
-};
-function myFunction() {
-  document.getElementById("case-study-button").index.html = "link";
-}
+var myCarousel = document.querySelector("#myCarousel");
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 2000,
+  wrap: false,
+});
